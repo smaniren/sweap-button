@@ -1,0 +1,1 @@
+{"version":3,"file":"frontend.js","mappings":";;;;;AAAAA,KAAK,CAAC,MAAM,CAAC,C","sources":["webpack://sweap-button/./src/frontend.js"],"sourcesContent":["alert('test')"],"names":["alert"],"sourceRoot":""}
