@@ -1,6 +1,9 @@
 {
   "name": "sweap-button",
   "version": "1.0.0",
+  "dependencies": {
+    "@wordpress/scripts": "^26.4.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
