@@ -229,6 +229,10 @@ function EditComponent(props) {
       value: 'icon icon--mail',
       label: 'Mail',
       disabled: false
+    }, {
+      value: 'icon icon--whatsapp',
+      label: 'Whatsapp',
+      disabled: false
     }]
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
     title: "Stil"

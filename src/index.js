@@ -84,7 +84,8 @@ function EditComponent(props) { //components must have uppercase in first charac
                                 { value: 'icon icon--phone', label: 'Telefon', disabled: false },
                                 { value: 'icon icon--search', label: 'Suche', disabled: false },
                                 { value: 'icon icon--send', label: 'Senden', disabled: false },
-                                { value: 'icon icon--mail', label: 'Mail', disabled: false }
+                                { value: 'icon icon--mail', label: 'Mail', disabled: false },
+                                { value: 'icon icon--whatsapp', label: 'Whatsapp', disabled: false }
                             ]}
                         />
                     </PanelRow>

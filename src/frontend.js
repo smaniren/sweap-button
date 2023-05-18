@@ -12,7 +12,8 @@ sweapButtons.forEach((buttonElement) => {
 
 
 function SweapButton(props) {
-    return (
+    return (<>
         <a target="_blank" href={props.link} className={props.style}>{props.text} <span> </span>  <i className={props.icon}></i></a>
+    </>
     )
 }
