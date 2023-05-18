@@ -21,7 +21,7 @@ class SweapButtonPlugin {
     }
 
     function adminAssets(){
-        wp_register_style( 'SWEAP-button-edit-css', plugin_dir_url( __FILE__ ) . 'build/index.css');
+        wp_register_style( 'SWEAP-button-edit-css', get_theme_file_uri( '/static/sass/main.css'));
         wp_register_script( 'SWEAP-button', plugin_dir_url( __FILE__ ) . 'build/index.js', array('wp-blocks', 'wp-element','wp-editor') );
         register_block_type( 'sweap-button/sweap-button', array(
             'editor_script' => 'SWEAP-button',
@@ -30,8 +30,13 @@ class SweapButtonPlugin {
             ));
     }
     function theHTML($attributes){
-        ob_start() ?>
-        <a href="<?php echo esc_html( $attributes['link'] ) ?>" class="<?php echo esc_html( $attributes['style'] ) ?>"><?php echo esc_html( $attributes['text'] ) ?></a>
+        if (!is_admin(  )){
+            wp_enqueue_script('sweapButtonFrontend', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element'), '1.0',true);
+            wp_enqueue_style('zihma_main_styles',get_theme_file_uri( '/static/sass/main.css'));
+        } 
+        
+        ob_start()?>
+        <div data-sweap-button><pre style="display: none"><?php echo wp_json_encode( $attributes) ?></pre></div>
         <?php return ob_get_clean();
     }
 }
